@@ -39,6 +39,3 @@ Ini adalah aplikasi kalkulator sederhana yang dibuat menggunakan Python dan Tkin
 
 Kontribusi sangat diterima! Silakan fork repositori ini dan kirimkan pull request dengan perbaikan atau fitur baru.
 
-## Lisensi
-
-Proyek ini dilisensikan di bawah lisensi MIT - lihat file [LICENSE](LICENSE) untuk detail lebih lanjut.
