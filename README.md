@@ -1,41 +1,34 @@
-# Kalkulator Sederhana
+# Kalkulator Sederhana Menggunakan Python
 
-Ini adalah aplikasi kalkulator sederhana yang dibuat menggunakan Python dan Tkinter. Aplikasi ini memiliki tampilan modern dengan tema warna yang lembut dan mudah di mata. 
+Ini adalah proyek sederhana untuk membuat kalkulator menggunakan bahasa pemrograman Python dan pustaka Tkinter untuk antarmuka pengguna grafis (GUI). Proyek ini cocok untuk pemula yang ingin mempelajari dasar-dasar Python dan pembuatan GUI.
 
 ## Fitur
 
-- Penambahan, pengurangan, perkalian, dan pembagian
-- Tampilan modern dengan warna lembut
-- Efek hover pada tombol
-- Tombol hapus (clear) dan backspace
-- Auto-formatting hasil kalkulasi
+- Operasi matematika dasar: penjumlahan, pengurangan, perkalian, dan pembagian.
+- Fungsi lanjutan: akar kuadrat, pangkat, logaritma, dan fungsi trigonometri (sin, cos, tan).
+- Validasi input untuk memastikan hanya karakter yang valid dapat dimasukkan.
+- Antarmuka pengguna yang sederhana dan mudah digunakan.
 
-## Cara Menggunakan
+## Persyaratan
 
-1. Masukkan angka dan operator matematika menggunakan tombol yang tersedia.
-2. Tekan tombol "=" untuk mendapatkan hasil kalkulasi.
-3. Gunakan tombol "C" untuk menghapus semua input dan "←" untuk menghapus karakter terakhir.
+- Python 3.x
+- Pustaka Tkinter (biasanya sudah termasuk dalam instalasi Python)
 
-## Cara Menjalankan
+## Instalasi
 
-1. Clone repositori ini ke komputer Anda:
-    ```sh
-    git clone https://github.com/Jesaurel/kalkulator.git
+1. Clone repositori ini ke mesin lokal Anda menggunakan perintah berikut:
+    ```bash
+    git clone https://github.com/JessicaAurelClarista/python-calculator.git
     ```
 2. Navigasi ke direktori proyek:
-    ```sh
-    cd kalkulator
+    ```bash
+    cd python-calculator
     ```
-3. Jalankan aplikasi menggunakan Python:
-    ```sh
+3. Jalankan skrip Python:
+    ```bash
     python kalkulator.py
     ```
 
-## Prasyarat
+## Penggunaan
 
-- Python 3.x harus terinstal di komputer Anda.
-
-## Kontribusi
-
-Kontribusi sangat diterima! Silakan fork repositori ini dan kirimkan pull request dengan perbaikan atau fitur baru.
-
+Setelah Anda menjalankan skrip, antarmuka kalkulator akan muncul. Anda dapat memasukkan angka dan operasi matematika menggunakan tombol pada antarmuka atau keyboard Anda. Tekan tombol `=` untuk mendapatkan hasil.
