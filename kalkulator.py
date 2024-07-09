@@ -18,7 +18,8 @@ class Calculator:
             '4', '5', '6', '*', 'sqrt',  # Baris kedua tombol
             '1', '2', '3', '-', '^',  # Baris ketiga tombol
             '0', '.', '=', '+', 'log',  # Baris keempat tombol
-            '(', ')', 'sin', 'cos', 'tan'  # Baris kelima tombol
+            '(', ')', 'sin', 'cos', 'tan',  # Baris kelima tombol
+            'DEL'  # Tombol hapus satu karakter
         ]
 
         row = 1  # Baris awal untuk penempatan tombol
@@ -26,12 +27,14 @@ class Calculator:
         for label in button_labels:
             # Membuat tombol dengan label yang sesuai
             button = tk.Button(root, text=label, padx=20, pady=20, font=('Arial', 12))
-            if label not in ['C', '=', 'sqrt', 'log', 'sin', 'cos', 'tan']:
+            if label not in ['C', '=', 'sqrt', 'log', 'sin', 'cos', 'tan', 'DEL']:
                 button.config(command=lambda l=label: self.on_button_click(l))  # Mengatur fungsi tombol biasa
             elif label == 'C':
                 button.config(command=self.on_clear)  # Fungsi tombol Clear
             elif label == '=':
                 button.config(command=self.on_equal)  # Fungsi tombol sama dengan
+            elif label == 'DEL':
+                button.config(command=self.on_backspace)  # Fungsi tombol Backspace
             else:
                 button.config(command=lambda l=label: self.on_function_click(l))  # Fungsi tombol fungsi matematika khusus
             
@@ -44,7 +47,7 @@ class Calculator:
         # Mengatur bobot grid untuk membuat tombol bersifat responsif
         for i in range(5):
             root.grid_columnconfigure(i, weight=1)
-        for i in range(1, 6):
+        for i in range(1, 7):
             root.grid_rowconfigure(i, weight=1)
 
     def validate_keypress(self, event):
@@ -78,6 +81,11 @@ class Calculator:
     def on_clear(self):
         self.expression = ""  # Mengosongkan ekspresi
         self.entry.delete(0, tk.END)  # Menghapus isi entry
+
+    def on_backspace(self):
+        self.expression = self.expression[:-1]  # Menghapus karakter terakhir dari ekspresi
+        self.entry.delete(0, tk.END)  # Menghapus isi entry
+        self.entry.insert(tk.END, self.expression)  # Menampilkan ekspresi yang diperbarui
 
     def on_equal(self):
         try:
